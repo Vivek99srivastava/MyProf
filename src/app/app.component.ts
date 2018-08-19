@@ -12,6 +12,7 @@ export class AppComponent {
 myData: Array<any>;
 
 constructor(private http:Http){
+  console.log();
  this.http.get('http://jsonplaceholder.typicode.com/photos').pipe(map(response => response.json())).subscribe(res => this.myData =res);
  
 }
